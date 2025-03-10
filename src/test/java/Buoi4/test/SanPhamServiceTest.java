@@ -42,4 +42,18 @@ public class SanPhamServiceTest {
         assertTrue(service.kiemTraMaTonTai("SP002"));
         assertFalse(service.kiemTraMaTonTai("SP999"));
     }
+
+    @Test
+    void testUpdate(){
+        SanPham newInfo = new SanPham("SP001", "Laptop", 6, 1500.0f, 10, "Điện tử");
+        boolean result = service.updateSp("SP001", newInfo);
+        assertTrue(result);
+    }
+
+    @Test
+    void validate (){
+        SanPham newInfo = new SanPham("SP001", null, 6, 1500.0f, 10, "Điện tử");
+        boolean result = service.valid(newInfo);
+        assertFalse(result);
+    }
 }

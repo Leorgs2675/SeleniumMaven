@@ -12,14 +12,14 @@ public class TinhThuong {
     }
     @Test
     public void tinhThuong2() {
-        assertEquals(50, service.TinhThuong(50, 10));
+        assertEquals(5, service.tinhThuong(50, 10));
     }
     @Test
     public void tinhThuong3() {
-        assertEquals(0, service.TinhThuong(500, 0));
+        assertEquals(0, service.tinhThuong(500, 0));
     }
     @Test
     public void tinhThuong4() {
-        assertEquals(0.5, service.TinhThuong(5, 10));
+        assertEquals(0.5, service.tinhThuong(5, 10));
     }
 }

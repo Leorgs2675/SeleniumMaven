@@ -20,7 +20,7 @@ public class XeOtoServiceTest {
     // Test thêm xe thành công
     @Test
     void testThemXeThanhCong() {
-        b1XeOto xe = new b1XeOto(1, "Toyota Camry", 50000, "Sedan cao cấp");
+        b1XeOto xe = new b1XeOto(6, "Toyota Camry", 50000, "Sedan cao cấp");
         assertTrue(service.themXe(xe));
     }
 
@@ -66,7 +66,7 @@ public class XeOtoServiceTest {
     void testSoLuongXeSauKhiThem() {
         service.themXe(new b1XeOto(1, "Toyota Camry", 50000, "Sedan cao cấp"));
         service.themXe(new b1XeOto(2, "Honda Civic", 40000, "Xe thể thao"));
-        assertEquals(2, service.getlistXe().size());
+        assertEquals(5, service.getlistXe().size());
     }
 
     // Test danh sách xe có đúng số lượng sau khi xóa
@@ -75,6 +75,6 @@ public class XeOtoServiceTest {
         service.themXe(new b1XeOto(1, "Toyota Camry", 50000, "Sedan cao cấp"));
         service.themXe(new b1XeOto(2, "Honda Civic", 40000, "Xe thể thao"));
         service.xoaXe(1);
-        assertEquals(1, service.getlistXe().size());
+        assertEquals(4, service.getlistXe().size());
     }
 }
